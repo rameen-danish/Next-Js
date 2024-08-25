@@ -2,7 +2,10 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import "./about.css"
-export default function Layout({ children }) {
+interface Children {
+    children: string;
+  }
+export default function Layout({ children }:Children) {
     const pathName = usePathname();
     console.log(pathName);
     return (
